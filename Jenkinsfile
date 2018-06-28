@@ -11,8 +11,11 @@ pipeline{
         }
       }
       steps{
-        sh 'mvn clean install'
+        sh 'mvn clean compile'
       }
+    }
+    stage('Deploy'){
+      sh 'mvn deploy'
     }
   }
 }
