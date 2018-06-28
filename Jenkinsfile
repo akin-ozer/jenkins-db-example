@@ -1,5 +1,8 @@
 #!groovy
-node{
+pipeline {
+
+    agent none {
+
         stages {
             stage('Compile Stage') {
                 steps {
@@ -20,5 +23,5 @@ node{
         }
 
 
-    
+    }
 }
