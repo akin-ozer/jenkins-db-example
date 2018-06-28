@@ -78,7 +78,7 @@
             <id>myMavenRepo.write</id>
             <url>https://mymavenrepo.com/repo/B170LeGKujGMgx9aU4pA/</url>
         </repository>
-</distributionManagement>
+    </distributionManagement>
 
 
 </project>
