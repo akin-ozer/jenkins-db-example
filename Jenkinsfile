@@ -1,7 +1,7 @@
 #!groovy
 
 pipeline{
-  agent{
+  agent none{
      steps{
         sh 'mvn clean compile'
       }
