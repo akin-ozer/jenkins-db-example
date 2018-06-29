@@ -5,7 +5,12 @@ pipeline{
     label 'master'
   }
   stages{
-    stage('Maven Install'){
+    stage('Maven clean install'){
+      steps{
+        sh 'mvn clean install'
+      }
+    }
+    stage('Maven Compile'){
       steps{
         sh 'mvn clean compile'
       }
