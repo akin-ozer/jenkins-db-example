@@ -2,7 +2,7 @@
 
 pipeline{
   agent{
-    label 'master'
+    label 'docker'
   }
   stages{
     stage('Maven clean install'){
