@@ -2,7 +2,7 @@
 
 pipeline{
   agent{
-    label 'docker'
+    label 'jnlp'
   }
   stages{
     stage('Maven clean install'){
