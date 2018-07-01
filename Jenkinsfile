@@ -2,7 +2,7 @@
 
 pipeline{
   agent{
-    label 'jnlp'
+    label 'master'
   }
   stages{
     stage('Maven clean install'){
