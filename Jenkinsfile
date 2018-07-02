@@ -17,9 +17,8 @@ pipeline{
     }
     stage('Deploy'){
       steps{
-        dir('/target') {
-          sh "cp demo-docker-example.jar var/lib/origin"
-        }
+        sh "cd /home/jenkins/.m2/repository/com/example/demo/0.0.1-SNAPSHOT"
+        sh "cp demo-docker-example.jar var/lib/origin"
       }
     }
   }
