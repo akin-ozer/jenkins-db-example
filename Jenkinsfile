@@ -2,7 +2,7 @@
 
 pipeline{
   agent{
-    label 'jnlp'
+    label "maven"
   }
   stages{
     stage('Maven clean install'){
@@ -17,7 +17,9 @@ pipeline{
     }
     stage('Deploy'){
       steps{
-        sh 'mvn deploy'
+        dir('/target') {
+          sh 'oc start-build mavenapp --from-dir . --follow'
+        }
       }
     }
   }
