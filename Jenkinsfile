@@ -18,7 +18,7 @@ pipeline{
     stage('Deploy'){
       steps{
         dir('/target') {
-          sh 'oc start-build mavenapp --from-dir . --follow'
+          sh "cp demo-docker-example.jar var/lib/origin"
         }
       }
     }
