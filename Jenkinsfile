@@ -7,8 +7,8 @@ pipeline{
   stages{
     stage('Remove old'){
       steps{
-        sh 'oc login https://api.starter-us-west-1.openshift.com --token=0uh0BRkl9AIwA0i7GeHd3FONKl4VgSECeHGdLG-IHCw'
         script{
+          sh 'oc login https://api.starter-us-west-1.openshift.com --token=0uh0BRkl9AIwA0i7GeHd3FONKl4VgSECeHGdLG-IHCw'
           try{
             sh 'oc delete all -l app=myjavaapp'
           }catch(Exception e){
