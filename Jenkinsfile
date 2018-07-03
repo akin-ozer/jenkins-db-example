@@ -12,7 +12,7 @@ pipeline{
     }
     stage('Build image'){
       steps{
-        sh 'oc start-build mavenapp'
+        sh 'oc start-build'
       }
     }
   }
