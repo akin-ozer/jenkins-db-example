@@ -65,6 +65,9 @@
     </dependencies>
 
     <build>
+        <finalName>
+            demo-docker-example
+        </finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
