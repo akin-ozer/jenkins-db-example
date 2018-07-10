@@ -32,7 +32,7 @@ server:
 spring:
   profiles: remote
   datasource:
-     url: jdbc:mysql://springdbex:3306/realvega?verifyServerCertificate=false&useSSL=true
+     url: jdbc:mysql://mysql:3306/realvega?verifyServerCertificate=false&useSSL=true
      username: realvega
      password: realvega
   jpa:
@@ -43,3 +43,6 @@ spring:
       ddl-auto: create-drop
 server:
   port: 8080
+
+#remote profile datasource url can be changed depending on cloud service, mysql:3306 used by openshift
+#container profile datasource url can be changed depending on mysql container name which is jdbc:mysql://container_name:container_port/db_name

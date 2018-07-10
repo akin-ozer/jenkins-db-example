@@ -1,0 +1,31 @@
+version: '3.3'
+
+services:
+   db:
+     image: mysql:5.7
+     ports: 
+       - 3306 #port inside, not reflecting to outside because spring app is collecting in docker environment
+     container_name: springdbex #crucial to spring datasource url
+     volumes:
+       - db_data:/var/lib/mysql
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: realvega
+       MYSQL_DATABASE: realvega
+       MYSQL_USER: realvega
+       MYSQL_PASSWORD: realvega
+
+   sprink:
+     depends_on:
+       - db #sets the build plan, so service named with this works before
+     image: ozoz:latest
+     container_name: akoz
+     ports: 
+       - 8080:8080
+     restart: always
+     links:
+       - db #sets to inside link with db, so db doesn't have to expose itself to outside
+
+volumes:
+    db_data: # %99 not required but it works with it
+
