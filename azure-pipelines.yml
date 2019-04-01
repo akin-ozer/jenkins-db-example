@@ -14,5 +14,4 @@ variables:
 
 steps:
 - script: mvn clean install -DskipTests
-  script: docker build -f Dockerfile -t $(imageName) .
-  displayName: 'docker build'
+- script: mvn clean install -DskipTests
