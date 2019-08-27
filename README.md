@@ -22,3 +22,5 @@ To create a maven build, package etc. you need to have following:
 Dockerfile, Jenkinsfile, application.yml, docker-compose.yaml have the comments inside to help make necessary changes.
 
  
+ 
+ added github actions
