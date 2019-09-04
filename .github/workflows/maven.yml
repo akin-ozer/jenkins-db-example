@@ -9,10 +9,10 @@ jobs:
 
     steps:
     - name: apt update
-      run: apt-get update
+      run: sudo -i && apt-get update && exit
     
     - name: apt install kubectl
-      run: apt-get install -y kubectl
+      run: sudo -i && apt-get install -y kubectl && exit
     
     - name: k version
       run: kubectl version
